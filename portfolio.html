@@ -18,37 +18,38 @@
   <body>
     <header class="header">
       <div class="container container-header">
-        <a href="./index.html" class="logo-header"
-          ><span class="logo-part-header">Web</span>Studio</a
+        <a href="./index.html" class="logo logo-header"
+          ><span class="logo__partheader">Web</span>Studio</a
         >
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-list-link" href="./index.html">Студія</a>
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="./index.html">Студія</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-list-link-current" href="./portfolio.html"
+            <li class="header__item">
+              <a class="header__link--current" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-list-link" href="/">Контакти</a>
+            <li class="header__item">
+              <a class="header__link" href="/">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="contact-list">
-          <li class="contact-address">
-            <a href="maito:info@devstudio.com" class="header-contact"
+
+        <ul class="header-contact__list">
+          <li class="header-contact__item">
+            <a href="maito:info@devstudio.com" class="header-contact__link"
               >
-              <svg class="header-icon" width="16" height="12">
+              <svg class="header-contact__icon" width="16" height="12">
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
               </svg> info@devstudio.com</a
             >
           </li>
-          <li class="contact-address">
-            <a href="tel:+380961111111" class="header-contact"
+          <li class="header-contact__item">
+            <a href="tel:+380961111111" class="header-contact__link"
               >
-              <svg class="header-icon" width="10" height="16">
+              <svg class="header-contact__icon" width="10" height="16">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>+38 096 111 11 11</a
             >
@@ -58,28 +59,28 @@
     </header>
     <!--  -->
     <main>
-      <section class="section section-filter">
-        <div class="container">
-          <h1 class="visually-hidden">Фільтри</h1>
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button type="button" class="button button-desc-current">
+      <section class="section filter">
+        <div class="container filter__container">
+          <h1 class="filter__tittle visually-hidden">Фільтри</h1>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--current">
                 Усі
               </button>
             </li>
-            <li class="filter-item">
-              <button type="button" class="button button-desc">
+            <li class="filter__item">
+              <button type="button" class="filter__button">
                 Веб-сайти
               </button>
             </li>
-            <li class="filter-item">
-              <button type="button" class="button button-desc">Додатки</button>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Додатки</button>
             </li>
-            <li class="filter-item">
-              <button type="button" class="button button-desc">Дизайн</button>
+            <li class="filter__item">
+              <button type="button" class="filter__button">Дизайн</button>
             </li>
-            <li class="filter-item">
-              <button type="button" class="button button-desc">
+            <li class="filter__item">
+              <button type="button" class="filter__button">
                 Маркетинг
               </button>
             </li>
@@ -245,10 +246,10 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container container-footer">
-        <div class="contact">
-          <a href="./index.html" class="logo-footer"
-            ><span class="logo-part-footer">Web</span>Studio</a
+      <div class="container footer__container">
+        <div class="footer__contact">
+          <a href="./index.html" class="logo logo-footer"
+            ><span class="logo__partheader">Web</span>Studio</a
           >
           <address class="address-footer">
             <ul class="footer-list">
@@ -307,16 +308,17 @@
             </li>
           </ul>
         </div>
-        <form class="form-input">
-          <p class="input-tittle">Підпишіться на розсилку</p>
-          <div class="mail-input">
-            <input type="email" name="mail" id="mail" placeholder="E-mail" class="footer-input">
-            <button type="submit" class="footer-button">Підписатися
-              <svg class="input-icon-footer" width="24" height="24">
+        <form class="mailing">
+          <p class="mailing__tittle">Підпишіться на розсилку</p>
+          <div class="mailing__box">
+            <input type="email" name="mail" id="email" placeholder="E-mail" class="mailing__input">
+            <button type="submit" class="button mailing__button">Підписатися
+              <svg class="mailing__icon" width="24" height="24">
                 <use href="./images/symbol-defs.svg#icon-send"></use>
               </svg>
             </button>
           </div>
+        </form>
         </form>
       </div>
     </footer>
