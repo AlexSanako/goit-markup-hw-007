@@ -59,9 +59,8 @@ address{
 .section-list,
 .work__list,
 .teams__list,
-.footer-list,
 .header__item,
-.contact-list,
+.contacts-group__list,
 .filter__list,
 .section-project{
     list-style-type: none;
@@ -75,7 +74,7 @@ address{
 .header {
     border-bottom: var(--border-color);
 }
-.container-header{
+.header__container{
     display: flex;
     align-items: center;
 }
@@ -217,14 +216,11 @@ address{
     background-color: #188CE8;
 }
 .header__link:hover,
-.footer-contact:hover,
-.footer-address:hover,
-.header__link:focus,
-.footer-contact:focus,
-.footer-address:focus{
+.contacts-group__link:hover,
+.contacts-group__link:focus,
+.header__link:focus {
     color: var(--accent-color);
 }
-
 
 
 /* HERO */
@@ -246,7 +242,7 @@ address{
     padding-bottom: 200px;
 }
 
-.container-hero {
+.hero__container {
     text-align: center;
 
 }
@@ -664,7 +660,7 @@ address{
     align-items: center;
     justify-content: center;
 }
-.social__list {
+.social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -724,12 +720,12 @@ address{
 }
 
 /* Portfolio */
-.filter__list {
+.filter {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.filter__list .filter__item + .filter__item {
+.filter .filter__item + .filter__item {
     margin-left: 8px;
 }
 
@@ -737,36 +733,35 @@ address{
     display: flex;
     flex-wrap: wrap;
 }
-.project-card {
+.project__card {
     background-color: var(--primary-background-color);
     flex-basis: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
-.project-card:nth-child(3n) {
+.project__card:nth-child(3n) {
     margin-right: 0;
 }
-.project-card:nth-last-child(-n + 3) {
+.project__card:nth-last-child(-n + 3) {
     margin-bottom: 0;
 }
-.project-link {
+.project__link {
     display: block;
     text-decoration: none;
     transition-property: color, shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
-.project-link:hover,
-.project-link:focus {
+.project__link:hover,
+.project__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.project-thumb {
+.project__thumb {
     position: relative;
     overflow: hidden;
 }
-
-.project-overlay {
+.project__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -784,10 +779,10 @@ address{
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-link:hover .project-overlay {
+.project__link:hover .project__overlay {
     transform: translateY(0);
 }
-.project-tittle {
+.project__title {
     color: var(--tittle-text-color);
     font-size: 18px;
     font-weight: 700;
@@ -798,7 +793,7 @@ address{
     text-decoration: none;
     margin-bottom: 4px;
 }
-.project-paragraph {
+.project__subtitle {
     color: var(--primary-text-color);
     font-size: 16px;
     font-weight: 400;
@@ -807,7 +802,7 @@ address{
     text-align: left;
     margin-bottom: 0;
 }
-.project-text {
+.project__text {
     padding: 20px 24px 20px 24px;
     border-right: var(--border-color);
     border-bottom: var(--border-color);
@@ -826,78 +821,54 @@ address{
     align-items: baseline;
 }
 
-.contacts {
+.contacts-group {
     margin-top: 28px;
 }
-.contacts__item:not(:last-child) {
+.contacts-group__item:not(:last-child) {
     margin-bottom: 12px;
 }
 .logo-footer{
     color: var(--color-text-action);
 }
 
-.footer-contact,
-.contacts__address {
-    text-decoration: none;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
+.contacts-group__list {
+    margin-right: 70px;
 }
-.footer-contact{
+.contacts-group__link{
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-align: left;
     font-style: normal;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
-.contacts__address {
+.contacts-group__link--address {
     color: var(--color-text-action);
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-align: left;
-    font-style: normal;
-}
-.footer__contact {
-    margin-right: 70px;
 }
 
-.address-social-list {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-.address-social-item {
-    width: 44px;
-    height: 44px;
-}
-.address-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+
+.subscription__link {
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--color-text-action);
-    border-radius: 50%;
-    transition-property: background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-link:hover,
-.address-link:focus {
+.subscription__link:hover,
+.subscription__link:focus {
     background-color: var(--accent-color);
     fill: var(--color-text-action);
 }
 
-.address-tittle {
+.subscription__tittle {
     color: var(--color-text-action);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 .mailing {
     margin-left: 93px;
