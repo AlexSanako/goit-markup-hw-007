@@ -101,26 +101,6 @@ address{
     padding-top: 32px;
     padding-bottom: 32px;
 }
-.header__link--current{
-    color: var(--accent-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-.header__link--current::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-    bottom: -1px;
-}
 .header__link{
     color: var(--tittle-text-color);
     font-weight: 500;
@@ -154,6 +134,27 @@ address{
 .header__link:hover::after {
     opacity: 1;
 }
+.header__link--current{
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.header__link--current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    bottom: -1px;
+}
+
 .header__list{
     display: flex; 
 }
@@ -497,18 +498,9 @@ address{
     padding: 6px 22px;
     background-color: var(--primary-color);
     color: var(--tittle-text-color);
-    border-color: transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
     font-weight: 500;
     line-height: 1.62;
     letter-spacing: 0.03em;
-    text-align: center;
-    cursor: pointer;
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .filter__button--current{
     background-color: var(--accent-color);
@@ -809,7 +801,7 @@ address{
     border-left: var(--border-color);
 }
 
-/* Footer studio + Footer portfolio */
+/* Footer */
 .footer {
     background-color: var(--secondary-background-color);
     padding-top: 60px;
