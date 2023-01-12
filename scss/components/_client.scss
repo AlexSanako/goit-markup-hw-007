@@ -1,0 +1,31 @@
+.client {
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin-top: 50px;
+    }
+    &__item{
+        flex-basis: calc((100%-5*30px)/6);
+    }
+}
+
+.client__link {
+    display: flex;
+    border: 1px solid var(--color-icon);
+    border-radius: 4px;
+    fill: var(--color-icon);
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    transition-property: fill, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}

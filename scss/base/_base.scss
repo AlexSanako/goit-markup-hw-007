@@ -19,11 +19,6 @@ ul {
     padding-left: 0;
     margin: 0;
 }
-.header__link,
-.header__link--current {
-    text-decoration: none;
-    color: inherit;
-}
 img {
     display: block;
     max-width: 100%;
@@ -33,15 +28,6 @@ address{
     font-style: normal;
 }
 
-.section-list,
-.work__list,
-.teams__list,
-.header__item,
-.contacts-group__list,
-.filter__list,
-.section-project{
-    list-style-type: none;
-}
 .section {
     padding-top: 94px;
     padding-bottom: 94px;

@@ -11,6 +11,7 @@
     --text-color-rjb: rgba(255, 255, 255, 0.6);
     --border-color: 1px solid #EEEEEE;
     --color-icon: #AFB1B8;
+    --background-color-hover: #188CE8;
 }
 
 body{
@@ -41,8 +42,8 @@ ul {
     padding-left: 0;
     margin: 0;
 }
-.header__link,
-.header__link--current {
+.header-menu__link,
+.header-menu__link--current {
     text-decoration: none;
     color: inherit;
 }
@@ -59,7 +60,7 @@ address{
 .section-list,
 .work__list,
 .teams__list,
-.header__item,
+.header-menu__item,
 .contacts-group__list,
 .filter__list,
 .section-project{
@@ -87,21 +88,19 @@ address{
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
-.logo-header {
-    margin-right: 93px;
-}
+
 
 .logo__partheader{
     color: var(--accent-color);
 }
 
-.header__item {
+.header-menu__item {
     position: relative;
     margin-left: 50px;
     padding-top: 32px;
     padding-bottom: 32px;
 }
-.header__link{
+.header-menu__link{
     color: var(--tittle-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -114,7 +113,7 @@ address{
     padding-bottom: 32px;
     
 }
-.header__link::after {
+.header-menu__link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -131,10 +130,10 @@ address{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
-.header__link:hover::after {
+.header-menu__link:hover::after {
     opacity: 1;
 }
-.header__link--current{
+.header-menu__link--current{
     color: var(--accent-color);
     font-weight: 500;
     font-size: 14px;
@@ -143,7 +142,7 @@ address{
     padding-top: 32px;
     padding-bottom: 32px;
 }
-.header__link--current::after {
+.header-menu__link--current::after {
     content: '';
     position: absolute;
     left: 0;
@@ -155,12 +154,13 @@ address{
     bottom: -1px;
 }
 
-.header__list{
+.header-menu__list{
     display: flex; 
 }
-.header__list .header__item:first-child {
+.header-menu__list .header-menu__item:first-child {
     margin-left: 0px;
 }
+
 
 .header-contact__link{
     display: flex;
@@ -187,7 +187,7 @@ address{
 }
 
 
-.header-contact__list {
+.header-contact {
     display: flex;
     padding: 0;
     margin-left: auto;
@@ -214,12 +214,12 @@ address{
 .hero__button--primary:focus,
 .mailing__button:hover,
 .mailing__button:focus {
-    background-color: #188CE8;
+    background-color: var(--background-color-hover);
 }
-.header__link:hover,
+.header-menu__link:hover,
 .contacts-group__link:hover,
 .contacts-group__link:focus,
-.header__link:focus {
+.header-menu__link:focus {
     color: var(--accent-color);
 }
 
@@ -296,7 +296,7 @@ address{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
     min-height: 581px;
     min-width: 528px;
-    background-color: #FFFFFF;
+    background-color: var(--primary-background-color);
 }
 .form-field {
     display: flex;
@@ -398,7 +398,7 @@ address{
 .modal-check__link {
     color: var(--accent-color);
 }
-.modal-field__control {
+.form-field__control {
     position: relative;
 }
 .form-field__icon {
@@ -415,32 +415,21 @@ address{
     justify-content: center;
     align-items: center;
     margin: auto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
     text-align: center;
-    letter-spacing: 0.06em;
     width: 200px;
     height: 50px;
-    color: var(--color-text-action);
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     border: inherit;
-    transition-property: background-color; 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .modal-check__button:hover,
 .modal-check__button:focus {
-    background-color: #188CE8;
+    background-color:var(--background-color-hover);
     cursor: pointer;
 }
 .modal__container {
     display: flex;
     align-items: center;
 }
-.modal__close {
+.modal__button {
     position: absolute;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -450,8 +439,8 @@ address{
     top: 8px;
     right: 8px;
 }
-.modal__close:hover,
-.modal__close:focus {
+.modal__button:hover,
+.modal__button:focus {
     cursor: pointer;
 }
 .modal__icon {
@@ -812,15 +801,14 @@ address{
     display: flex;
     align-items: baseline;
 }
-
+.logo-footer{
+    color: var(--color-text-action);
+}
 .contacts-group {
     margin-top: 28px;
 }
 .contacts-group__item:not(:last-child) {
     margin-bottom: 12px;
-}
-.logo-footer{
-    color: var(--color-text-action);
 }
 
 .contacts-group__list {
