@@ -1,14 +1,26 @@
 .client {
-
+    &__title {
+        color: var(--tittle-text-color);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
     &__list {
         display: flex;
         gap: 30px;
         margin-top: 50px;
     }
     &__item{
-        flex-basis: calc((100%-5*30px)/6);
+        flex-basis: 30px;
     }
+    
 }
+
+// &__item{
+//     flex-basis: calc((100%-5*30px)/6);
+// }
 
 .client__link {
     display: flex;

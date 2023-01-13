@@ -1,23 +1,19 @@
-@import './utils/variables';
 @import './base/base';
 @import './base/container';
-@import './utils/visually-hidden';
+@import './utils/variables';
 
 // HEADER
 @import './components/header';
+@import './components/logo';
 @import './components/header-menu';
 @import './components/header-contact';
-@import './components/logo';
-
-// BUTTON
-@import './components/button';
-
-// SOCIALS
-@import './components/social';
 
 // STUDIO
 // HERO
 @import './components/hero';
+// BUTTON
+@import './components/button';
+
 
 // MODAL
 @import './components/modal';
@@ -32,17 +28,17 @@
 
 // TEAMS
 @import './components/teams';
+@import './components/social';
 
 // CLIENT
 @import './components/client';
 
+// FOOTER
+@import './components/footer';
+@import './components/contact-group';
+@import './components/subscription';
+@import './components/mailing';
 
 // PORTFOLIO
 @import './components/filter';
 @import './components/project';
-
-// FOOTER
-@import './components/contact-group';
-@import './components/mailing';
-@import './components/subscription';
-@import './components/footer';
